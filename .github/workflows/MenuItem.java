@@ -29,5 +29,39 @@ public class MenuItem {
         return icon; 
     }
 
+    public String getDescription(){
+        return name + "-$" + price;
+    }
+
+
+
+    public class SpicyMenuItem extends MenuItem{
+        public SpicyMenuItem(String name, double price, String icon){
+            super(name, price,icon );
+        }
+
+
+        @Override
+        public String getDescription(){
+            return super.getDescription() + "Spicy";
+        }
+    
+
+    }
+
+    public class GlutenFreeItem extends MenuItem{
+        public GlutenFreeItem(String name, double price, String icon){
+            super(name, price,icon );
+        }
+
+
+        @Override
+        public String getDescription(){
+            return super.getDescription() + "Gulten free";
+        }
+    
+
+    }
+
 
 }
